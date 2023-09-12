@@ -3,11 +3,12 @@ import ServiceCard from "./ServiceCard/ServiceCard";
 
 const Services = () => {
    const [services, setServices] = useState([])
+   const url = `http://localhost:3000/service`
    useEffect(() => {
-      fetch("service.json")
+      fetch(url)
          .then(res => res.json())
          .then(data => setServices(data))
-   }, [])
+   }, [url])
    return (
       <div>
          <h1>This is Services</h1>

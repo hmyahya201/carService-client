@@ -13,7 +13,7 @@ const Login = () => {
          .then(result=>{
             const user = result.user;
             form.reset()
-            alert("your Login is success")
+            alert("your Logingit branch -M main is success")
          })
          .catch((error) => {
             const errorMessage = error.message;

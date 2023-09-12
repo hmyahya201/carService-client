@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-   console.log("service", service)
    const { img, price, title, _id } = service
    return (
       <div>
@@ -13,7 +13,7 @@ const ServiceCard = ({ service }) => {
                </h2>
                <div className="card-actions justify-end">
                   <div className="badge badge-outline">{"$"+price}</div>
-                  <button className="btn btn-accent">Accent</button>
+                  <Link to = {`/checkout/${_id}`}><button className="btn btn-accent">Book Now</button></Link>
                </div>
             </div>
          </div>
